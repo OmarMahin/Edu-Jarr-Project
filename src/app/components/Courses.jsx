@@ -17,7 +17,7 @@ const Courses = () => {
 				className=' -translate-x-1/2 w-full max-w-[1920px] z-[-1] absolute left-1/2 bottom-0'
 			></Image>
 			<Container>
-				<Flex className={"lg:mt-[160px] mt-[110px] flex-col items-center"}>
+				<Flex className={"lg:mt-[160px] mt-[0px] flex-col items-center"}>
 					<SectionTitle black={"Featured"} green={"Courses"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporidunt ut labore veniam..."}></SectionTitle>
 					<CourseContent></CourseContent>
 					<Button className={"w-fit lg:mt-[90px] mt-[60px] mb-[90px] lg:mb-[130px]"}>Explore courses</Button>

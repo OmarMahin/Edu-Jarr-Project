@@ -29,9 +29,9 @@ const Banner = () => {
 				width={1920}
 				height={936}
 				alt='Banner'
-				className=' absolute top-0 left-1/2 -translate-x-1/2 md:h-full h-[500px] z-[-10]'
+				className=' absolute top-0 left-1/2 -translate-x-1/2 h-full z-[-10]'
 			></Image>
-			<Container className={"w-full relative"}>
+			<Container className={"w-full relative lg:pb-0 pb-[30px]"}>
 				{windowSize ? (
 					<>
 						<Image
@@ -56,7 +56,7 @@ const Banner = () => {
 								}}
 							/>
 						</h1>
-						<Flex className={"items-center gap-[20px] md:gap-[35px] md:mt-0 mt-10"}>
+						<Flex className={"items-center gap-[20px] md:gap-[35px] md:mt-0 mt-10 "}>
 							<Button className={"w-fit"} transparent={true}>
 								View Courses
 							</Button>
@@ -114,7 +114,7 @@ const Banner = () => {
 					</>
 				)}
 			</Container>
-			{windowSize && (
+			{windowSize ? (
 				<Flex className={"absolute bottom-1 translate-y-[100%] z-10"}>
 					<Image src={"/images/banner_bottom.png"} width={1920} height={169}></Image>
 					<Container className={"absolute top-0 left-1/2 -translate-x-1/2 z-20 w-full "}>
@@ -128,7 +128,8 @@ const Banner = () => {
 						</Flex>
 					</Container>
 				</Flex>
-			)}
+			):
+			""}
 		</Flex>
 	)
 }
