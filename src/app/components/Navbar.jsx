@@ -52,7 +52,7 @@ const Navbar = () => {
               <Link href="/">
                 <BiBasket />
               </Link>
-              <span className="font-medium text-white w-5 h-5 rounded-full bg-secondary absolute top-1 right-1 translate-x-1/2 -translate-y-1/2 z-20 text-[12px] text-center pt-[2px]">
+              <span className="font-medium text-white w-5 h-5 rounded-full bg-secondary absolute top-1 right-1 translate-x-1/2 -translate-y-1/2 z-20 text-[12px] text-center leading-[17px]">
                 0
               </span>
             </div>
