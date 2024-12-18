@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = "mongodb+srv://mern2305exam:mahin020809@nextjs.e9wwd.mongodb.net/?retryWrites=true&w=majority&appName=NextJs"
+const MONGODB_URI = process.env.MONGO_URL
 
 let cached = global.mongoose
 
