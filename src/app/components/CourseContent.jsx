@@ -19,7 +19,7 @@ const CourseContent = () => {
 					setDataReady(true)
           toast.success(`Data loaded`)
           console.log(`Data fetched from ${process.env.NEXT_PUBLIC_BACKEND_URL}/api/courses-get`)
-          console.log("Data fetched successfully:", res.data.allCourses)
+          console.log("Data fetched successfully:", res)
 				}
 			})
 		} catch (err) {

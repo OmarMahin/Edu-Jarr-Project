@@ -1,11 +1,10 @@
 import Course from "@/app/models/coursesModel"
-import corsMiddleware from "@/lib/cors"
 import { NextResponse } from "next/server"
 
-export async function GET(request, { res }) {
+export async function GET(request, res) {
+    
 	try {
-        await corsMiddleware(request, res)
-        
+
         const allCourses = await Course.find()
 
         if (!allCourses || allCourses.length === 0) {
