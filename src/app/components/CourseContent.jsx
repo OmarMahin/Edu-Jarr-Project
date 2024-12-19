@@ -18,6 +18,7 @@ const CourseContent = () => {
 					setCourses(res.data.allCourses)
 					setDataReady(true)
           toast.success(`Data loaded`)
+          console.log("Data fetched successfully:", res.data.allCourses)
 				}
 			})
 		} catch (err) {
