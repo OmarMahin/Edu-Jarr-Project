@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import Flex from "./Flex"
 import CourseItem from "./CourseItem"
 import axios from "axios"
+import { toast } from "react-toastify"
 
 const CourseContent = () => {
 	const [courses, setCourses] = useState([])
@@ -16,10 +17,12 @@ const CourseContent = () => {
 				if (res.status === 200) {
 					setCourses(res.data.allCourses)
 					setDataReady(true)
+          toast.success(`Data loaded`)
 				}
 			})
 		} catch (err) {
 			console.error("Error getting courses:", err)
+      toast.error(`Error: ${err.message}`)
 		}
 	}, [])
 

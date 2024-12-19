@@ -2,6 +2,7 @@ import { Saira } from "next/font/google"
 import "./globals.css"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import { Slide, ToastContainer } from "react-toastify"
 
 const saira = Saira({
 	weight: ["100", "300", "400", "500", "600", "700", "800", "900"],
@@ -19,6 +20,22 @@ export default async function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body className={saira.className}>
+			<ToastContainer
+					className={"w-[400px] text-center font-semibold text-[16px] duration-700"}
+					position='top-center'
+					autoClose={3000}
+					hideProgressBar={false}
+					newestOnTop={false}
+					closeOnClick
+					rtl={false}
+					pauseOnFocusLoss={false}
+					draggable={false}
+					pauseOnHover={false}
+					theme='light'
+					transition={Slide}
+					
+				/>
+				
 				<Navbar />
 				{children}
 				<Footer />
