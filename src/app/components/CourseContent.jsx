@@ -29,7 +29,7 @@ const CourseContent = () => {
 				"flex-wrap mt-[90px] lg:justify-between justify-center gap-y-12 items-center gap-x-4"
 			}
 		>
-			{dataReady ? (
+			{dataReady && courses ? (
 				courses.map((course) => (
 					<CourseItem
 						key={course._id}
