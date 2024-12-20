@@ -17,14 +17,11 @@ const CourseContent = () => {
 				if (res.status === 200) {
 					setCourses(res.data.allCourses)
 					setDataReady(true)
-          toast.success(`Data loaded`)
-          console.log(`Data fetched from ${process.env.NEXT_PUBLIC_BACKEND_URL}/api/courses-get`)
-          console.log("Data fetched successfully:", res)
 				}
 			})
 		} catch (err) {
 			console.error("Error getting courses:", err)
-      toast.error(`Error: ${err.message}`)
+			toast.error(`Error: ${err.message}`)
 		}
 	}, [])
 
@@ -70,7 +67,6 @@ const CourseContent = () => {
 						<span className='h-2 bg-gray-300 rounded-full w-16 ' />
 					</div>
 				</div>
-				
 			)}
 		</Flex>
 	)
