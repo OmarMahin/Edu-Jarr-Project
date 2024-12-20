@@ -1,10 +1,11 @@
 import Course from "@/app/models/coursesModel";
+import databaseConnect from "@/lib/databaseConnection";
 import { NextResponse } from "next/server";
 
 
 export async function POST(request) {
   try {
-
+    await databaseConnect()
     const {courseName, price, courseTime, totalStudents, imageLink} = await request.json();
     const course = new Course({
       courseName,

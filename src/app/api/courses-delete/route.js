@@ -1,8 +1,10 @@
 import Course from "@/app/models/coursesModel"
+import databaseConnect from "@/lib/databaseConnection"
 import { NextResponse } from "next/server"
 
 export async function DELETE(request) {
 	try {
+		await databaseConnect()
 		const { _id } = await request.json()
 
 		const deleteCourse = await Course.findByIdAndDelete(_id)

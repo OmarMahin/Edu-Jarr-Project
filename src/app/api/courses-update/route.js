@@ -1,8 +1,10 @@
 import Course from "@/app/models/coursesModel"
+import databaseConnect from "@/lib/databaseConnection"
 import { NextResponse } from "next/server"
 
 export async function POST(request) {
 	try {
+		await databaseConnect()
 		const { _id, ...updateFields } = await request.json()
 
 
